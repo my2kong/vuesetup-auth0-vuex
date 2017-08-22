@@ -11,20 +11,20 @@ import axios from 'axios'
 axios.defaults.baseURL = 'http://localhost:3000'
 
 axios.interceptors.response.use((response) => {
-  return response
+    return response
 }, function (error) {
-  // Do something with response error
-  if (error.response.status === 401) {
-    console.log('unauthorized, logging out ...')
-    auth.logout()
-    router.replace('/login')
-  }
-  return Promise.reject(error)
+    // Do something with response error
+    if (error.response.status === 401) {
+        console.log('unauthorized, logging out ...')
+        auth.logout()
+        router.replace('/login')
+    }
+    return Promise.reject(error)
 })
 
 /* eslint-disable no-new */
 new Vue({
-  template: `
+    template: `
   <div>
     <navbar />
     <section class="section">
@@ -34,9 +34,9 @@ new Vue({
     </section>
   </div>
   `,
-  router,
-  store,
-  components: {
-    navbar
-  }
+    router,
+    store,
+    components: {
+        navbar
+    }
 }).$mount('#app')

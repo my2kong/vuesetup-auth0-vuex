@@ -1,13 +1,13 @@
 <template lang="html">
-  <div id="dashboard">
+    <div id="dashboard">
     Dashboard content will go here
-  </div>
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'dashboard'
-}
+    export default {
+        name: 'dashboard'
+    }
 </script>
 
 <style lang="css">
